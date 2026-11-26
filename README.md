@@ -2,9 +2,9 @@
 
 A rectangle-measure certificate proving **s(31) ≥ 2989/500 = 5.978**: no 31 unit squares fit in a square of side 5.978.
 
-The record at n = 31 is s(31) ≥ 2391/400 = 5.9775, Hiroaki Hosono's `mixed_n31_L59775` (T-232 in [jlevy/squares](https://github.com/jlevy/squares)). The upper bound is 6. This certificate raises the lower bound by 1/2000.
+The registered record at n = 31 is s(31) ≥ 2391/400 = 5.9775, Hiroaki Hosono's `mixed_n31_L59775` (T-232 in [jlevy/squares](https://github.com/jlevy/squares)). The upper bound is 6. Joost de Winter's open reports also cover n = 31, none of them registered yet: 5.977500696… in jlevy/squares#1039, then 59777257/10000000 in the #1042 supplement, and s(31) > 149447/25000 = 5.97788 in #1060's final table. This certificate is 1/2000 above T-232 and 3/25000 above the highest of those.
 
-It is Hosono's measure, scaled. Nothing in the measure was re-optimized. The new step is to spend the finer net's headroom on a larger core. Without that, the scaled measure fails at the walls (jlevy/squares#890 recorded that failure).
+It is Hosono's measure, scaled. Nothing in the measure was re-optimized. The finer net's headroom goes into a larger core. Without that, the scaled measure fails at the walls (jlevy/squares#890 recorded that failure). A core larger than the dilated one is not new: Joost de Winter's T-327 (jlevy/squares#1018, n = 108) used one first. We found it independently for n = 31.
 
 **Status.** The register's verifier, `sqverify-fast`, unmodified, decided every one of the 5,925 declared directions: all verified, none refused. That is the authors' own run. No independent replay, review or formalization has been done.
 
@@ -29,7 +29,7 @@ Scaling the container, the measure and the core by λ keeps the mass every old c
 - **The centre domain grows.** Unit squares do not scale, so the admissible centre domain grows toward the walls in old coordinates.
 - **The net changes.** Hosono's 2,073-direction net (step 1/5002) does not admit the larger core. On the step-1/14300 net only direction 0 coincides with one of his, so 5,924 of the 5,925 directions are new.
 
-Both earlier dilations of Hosono measures, for n = 94 (T-262 and T-266), set the core to exactly `B_old · λ`. jlevy/squares#890 reports that the same move at n = 31 fails: at L = 2989/500 on a step-1/8600 net, direction 529 is refused near a wall. That matches what we found with `B = B_old · λ`: 19 of 3,564 directions refused, a contiguous band near half-angle tangent 0.062.
+Özden's dilations of a Hosono measure for n = 94 (T-262 and T-266) set the core to exactly `B_old · λ`. De Winter's T-327 at n = 108 did not: its finer net admits a larger core, and it uses one. jlevy/squares#890 reports that the same move at n = 31 fails: at L = 2989/500 on a step-1/8600 net, direction 529 is refused near a wall. That matches what we found with `B = B_old · λ`: 19 of 3,564 directions refused, a contiguous band near half-angle tangent 0.062.
 
 Exact probes (`tools/wallscan.py`) of the cores at the extreme centre `x = L − r(a)` across that band show the size of the problem:
 
@@ -90,9 +90,9 @@ bash verify/run_full.sh /path/to/sqverify-fast verify/out 9
 
 ## Lineage and credit
 
-The measure, its format and the declared-net method are Hiroaki Hosono's (wand125). They come after Tokoharu's rectangle-density certificates, and are checked with the Squares Project's `sqverify-fast`. Dilating a Hosono measure onto a finer net follows Doğa Özden's T-262 and T-266. The contribution here is the larger core, which lets the dilation pass at n = 31 where #890 found it refused.
+The measure, its format and the declared-net method are Hiroaki Hosono's (wand125). They come after Tokoharu's rectangle-density certificates, and are checked with the Squares Project's `sqverify-fast`. Dilating a Hosono measure onto a finer net follows Doğa Özden's T-262 and T-266. Joost de Winter's T-327 had already used a core larger than the dilated one. We found that step independently. The contribution here is applying it at n = 31, where it lets the dilation pass where #890 found it refused.
 
-Suggested credit: **wlo2 after Hosono, Tokoharu, Özden and Levy**.
+Suggested credit: **wlo2 after Hosono, Tokoharu, Özden and Levy**, with de Winter's T-327 noted as the first use of the larger core.
 
 ## Licence
 
