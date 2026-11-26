@@ -1,0 +1,38 @@
+{
+  "build": {
+    "profile": "release",
+    "rustc": "rustc 1.94.0 (4a4ef493e 2026-03-02)",
+    "source_sha256": "d97758bbc9639edc70b8bd7dc83106d4e8d1be034bacb3e88f8c539b88091c88",
+    "target": "aarch64-apple-darwin"
+  },
+  "direction_cpu_seconds": -0.0,
+  "direction_seconds": 35574.027689075956,
+  "directions": 5925,
+  "fault_injected_at_box": null,
+  "kind": "sqverify-fast-summary/v1",
+  "nodes": 2235226568,
+  "premises": {
+    "B": "99993/100000",
+    "D": "1/14300",
+    "L": "2989/500",
+    "angle_count": 5925,
+    "centre_domain": "per-bin",
+    "expanded_points": 0,
+    "expanded_rectangles": 4244,
+    "expanded_segments": 0,
+    "format": "M",
+    "input_sha256": "d5b8d54ac0eeab94926e7c6296fbaf8a86b113ebf7bb19e5b480b534576e52d7",
+    "mass_below_n": "1/100000",
+    "mass_exact": "3099999/100000",
+    "n": 31,
+    "net_last_tangent": "1481/3575",
+    "net_origin": "proof_net",
+    "shrink_bound": "1429999893/1430000000",
+    "source_rectangles": 536
+  },
+  "refused_directions": [],
+  "status": "VERIFIED",
+  "threads": 9,
+  "threshold": "1",
+  "wall_seconds": 3955.654401333
+}

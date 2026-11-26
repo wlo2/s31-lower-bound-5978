@@ -1,0 +1,17 @@
+source L = 2391/400, candidate L = 2989/500, lam = 11956/11955
+  [pass] same n: 31
+  [pass] lam > 1
+  [pass] no points in source or candidate
+  [pass] same number of rectangles: 536
+  [pass] every coordinate = lam * source coordinate
+  [pass] every mass unchanged
+  [pass] total_mass is the exact sum: 3099999/100000
+  [pass] total_mass < n: n - total = 1/100000
+  [pass] B(1 + D) < 1: 1429999893/1430000000
+  [pass] B(1 + D/(1 - D^2/4)) < 1: 27265331259869/27265333300000
+  [pass] last*D >= tan(pi/8): last tangent 1481/3575
+  [pass] (last-1)*D < tan(pi/8) (net not longer than needed)
+  [pass] last*D <= 1/2
+  [pass] directions <= 2^16: 5925 directions
+  [pass] core >= B_old * lam: B = 99993/100000, B_old * lam = 14942011/14943750, ratio - 1 = 4.638e-05
+AUDIT PASS
